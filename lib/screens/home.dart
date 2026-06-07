@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.white,
         actions: [
           IconButton(
             onPressed: () {},
