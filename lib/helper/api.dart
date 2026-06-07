@@ -11,4 +11,15 @@ class Api {
       throw Exception('there is a problem ${response.statusCode}');
     }
   }
+
+  Future<dynamic> post({required String url , dynamic body}) async {
+    http.Response response = await http.post(Uri.parse(url) , 
+    
+    body: body,
+    );
+
+    Map<String, dynamic> data = jsonDecode(response.body);
+    print(data);
+    return data;
+  }
 }

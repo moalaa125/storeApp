@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:store_app/models/services/get_all_categories_servies.dart';
-import 'package:store_app/models/services/get_all_products_services.dart';
+import 'package:http/http.dart' as http;
+import 'package:store_app/helper/api.dart';
+import 'package:store_app/services/all_categories.dart';
+import 'package:store_app/services/get_all_products_services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-       
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -24,7 +23,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
 
   final String title;
 
@@ -48,9 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     // TODO: implement initState
     getcat.getAllCategories();
-    
+
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -97,9 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed:  null,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        onPressed: null,
       ),
     );
   }
