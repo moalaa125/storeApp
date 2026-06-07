@@ -12,14 +12,15 @@ class Api {
     }
   }
 
-  Future<dynamic> post({required String url , dynamic body}) async {
-    http.Response response = await http.post(Uri.parse(url) , 
-    
-    body: body,
-    );
-
-    Map<String, dynamic> data = jsonDecode(response.body);
-    print(data);
-    return data;
+  Future<dynamic> post({required String url, dynamic body}) async {
+    http.Response response = await http.post(Uri.parse(url), body: body);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> data = jsonDecode(response.body);
+      return data;
+    } else {
+      throw Exception(
+        'there is a problem ${response.statusCode} , ${response.body}',
+      );
+    }
   }
 }
