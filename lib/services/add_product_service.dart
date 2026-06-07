@@ -3,7 +3,7 @@ import 'package:store_app/models/product_model.dart';
 
 class AddProduct {
   Future<ProductModel> addProduct({
-    required String title,
+      required String title,
     required double price,
     required String description,
     required String category,
