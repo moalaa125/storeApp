@@ -12,7 +12,7 @@ class StoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {Home.id: (context) => const Home()},
+      routes: {Home.id: (context) =>  Home()},
       initialRoute: Home.id,
 
       title: 'Flutter Demo',

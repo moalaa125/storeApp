@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:store_app/widgets/custom_card.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   const Home({super.key});
 
   static String id = 'home';
 
   @override
-  State<Home> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<Home> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.red,
         actions: [
           IconButton(
             onPressed: () {},
@@ -30,7 +26,19 @@ class _MyWidgetState extends State<Home> {
         title: Text('New Trend'),
         centerTitle: true,
       ),
-      body: null,
+      body: Padding(
+        padding: const EdgeInsets.only(right: 10, left: 10, top: 80),
+        child: GridView.builder(
+          clipBehavior: Clip.none,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: 1.4,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 100,
+          ),
+          itemBuilder: (context, index) => CustomCard(),
+        ),
+      ),
     );
   }
 }
