@@ -1,4 +1,3 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
@@ -15,7 +14,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  late Future<List<ProductModel>> futureProducts;
+    late Future<List<ProductModel>> futureProducts;
+
 
   @override
   void initState() {
@@ -23,30 +23,16 @@ class _HomeState extends State<Home> {
     futureProducts = AllProductsService().getAllProducts();
   }
 
-  var _bottomNavIndex = 0;
 
-  final iconList = <IconData>[
-    Icons.home,
-    Icons.add,
-    Icons.update,
-    Icons.delete,
-  ];
+
+  int currentPageIndex = 0;
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: AnimatedBottomNavigationBar(
-        activeColor: Colors.red,
-        icons: [iconList[0], iconList[1], iconList[2], iconList[3]],
-        activeIndex: _bottomNavIndex,
-        gapWidth: 10,
-        gapLocation: GapLocation.center,
-        notchSmoothness: NotchSmoothness.verySmoothEdge,
-        leftCornerRadius: 32,
-        rightCornerRadius: 32,
-        onTap: (index) => setState(() => _bottomNavIndex = index),
-        //other params
-      ),
+
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
