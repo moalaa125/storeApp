@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/screens/home.dart';
+import 'package:store_app/screens/update_product_page.dart';
 
 void main() {
   runApp(const StoreApp());
@@ -12,11 +13,13 @@ class StoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {Home.id: (context) =>  Home()},
+      routes: {
+        Home.id: (context) => Home(),
+        UpdateProductPage.id: (context) => const UpdateProductPage(),
+      },
       initialRoute: Home.id,
 
       title: 'Flutter Demo',
-      // theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: Home(),
     );
   }
