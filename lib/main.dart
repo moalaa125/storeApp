@@ -22,7 +22,7 @@ class StoreApp extends StatelessWidget {
           title: 'Flutter Demo',
           routes: {
             Home.id: (context) => Home(),
-            UpdateProductPage.id: (context) => const UpdateProductPage(),
+            UpdateProductPage.id: (context) =>  UpdateProductPage(),
           },
           initialRoute: Home.id, 
         );
