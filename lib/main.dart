@@ -16,7 +16,7 @@ class StoreApp extends StatelessWidget {
       initialRoute: Home.id,
 
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      // theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: Home(),
     );
   }

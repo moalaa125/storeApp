@@ -11,7 +11,6 @@ class AllProductsService {
 
     for (int i = 0; i < data.length; i++) {
       ProductList.add(ProductModel.fromJson(data[i]));
-      print(ProductList[i].id);
     }
     return ProductList;
   }

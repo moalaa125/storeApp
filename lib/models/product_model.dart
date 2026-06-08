@@ -19,7 +19,7 @@ class ProductModel {
     return ProductModel(
       id: jsonData['id'],
       title: jsonData['title'],
-      price: jsonData['price'],
+      price: (jsonData['price'] as num).toDouble(),
       description: jsonData['description'],
       category: jsonData['category'],
       image: jsonData['image'],
