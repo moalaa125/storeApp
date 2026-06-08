@@ -13,12 +13,13 @@ class AddProduct {
       url: 'https://fakestoreapi.com/products',
       body: {
         'title': title,
-        'price': price,
+        'price': price.toString(),
         'description': description,
         'category': category,
         'image': image,
       },
     );
+    print(data);
     return ProductModel.fromJson(data);
   }
 }
