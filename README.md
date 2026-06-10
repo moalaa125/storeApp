@@ -1,4 +1,4 @@
-# 🛍️ Store App
+# 🛍️ Trendo
 
 > ⚠️ **Notice: This app is still under development and not yet complete.**
 
@@ -6,7 +6,7 @@
 
 ## 📌 About the Project
 
-**Store App** is a mobile application built with **Flutter** that allows users to browse, add, and update products by connecting to the [Fake Store API](https://fakestoreapi.com).
+**Trendo** is a mobile application built with **Flutter** that allows users to browse, add, and update products by connecting to the [Fake Store API](https://fakestoreapi.com).
 
 ---
 
