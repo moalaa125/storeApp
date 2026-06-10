@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:store_app/screens/add_product_page.dart';
-import 'package:store_app/screens/home.dart';
+import 'package:store_app/screens/main_screen.dart';
 import 'package:store_app/screens/update_product_page.dart';
 
 void main() {
@@ -20,13 +19,12 @@ class StoreApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'Trendo',
           routes: {
-            Home.id: (context) => Home(),
-            UpdateProductPage.id: (context) => UpdateProductPage(),
-            AddProductPage.id: (context) => AddProductPage(),
+            MainScreen.id: (context) => const MainScreen(),
+            UpdateProductPage.id: (context) => const UpdateProductPage(),
           },
-          initialRoute: Home.id,
+          initialRoute: MainScreen.id,
         );
       },
     );

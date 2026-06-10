@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
 import 'package:store_app/services/get_all_products_services.dart';
+import 'package:store_app/widgets/custom_buttom_nav.dart';
 import 'package:store_app/widgets/custom_card.dart';
-import 'package:store_app/widgets/nav_bar_widget.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -29,45 +29,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(25.0),
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-            child: Container(
-              height: 70,
-              color: Colors.white.withValues(alpha: 0.5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CustomNavItem(
-                    icon: Icons.home,
-                    label: 'home',
-                    isSelected: true,
-                  ),
-                  CustomNavItem(
-                    icon: Icons.search,
-                    label: 'search',
-                    isSelected: false,
-                  ),
-                  CustomNavItem(
-                    icon: Icons.shopping_cart,
-                    label: 'cart',
-                    isSelected: false,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-      backgroundColor: Colors.grey,
+  
+      backgroundColor: Color(0xFFFCF8FA),
       appBar: AppBar(
         elevation: 0,
         scrolledUnderElevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFFCF8FA),
         actions: [
           IconButton(
             onPressed: () {},
@@ -78,7 +45,14 @@ class _HomeState extends State<Home> {
             ),
           ),
         ],
-        title: Text('New Trend'),
+        title: Text(
+          'Trendo',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
       ),
       body: Stack(

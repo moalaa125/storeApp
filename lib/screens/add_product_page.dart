@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/services/add_product_service.dart';
+import 'package:store_app/widgets/custom_buttom_nav.dart';
 import 'package:store_app/widgets/custom_dropdown.dart';
 import 'package:store_app/widgets/custom_text_filed.dart';
 import 'package:store_app/widgets/cutom_button.dart';
@@ -39,11 +40,13 @@ class _AddProductPageState extends State<AddProductPage> {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        extendBody: true,
+        
+        backgroundColor: Color(0xFFFCF8FA),
         appBar: AppBar(
+          backgroundColor: Color(0xFFFCF8FA),
           elevation: 0,
           scrolledUnderElevation: 0,
-          backgroundColor: Colors.white,
           title: Text('Add Product'),
           centerTitle: true,
         ),

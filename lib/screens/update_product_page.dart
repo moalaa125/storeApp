@@ -29,11 +29,10 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
   Widget build(BuildContext context) {
     ProductModel product =
         ModalRoute.of(context)!.settings.arguments as ProductModel;
-
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
-        backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFFCF8FA),
         appBar: AppBar(
           elevation: 0,
           scrolledUnderElevation: 0,
