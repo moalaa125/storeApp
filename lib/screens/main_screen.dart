@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:store_app/screens/add_product_page.dart';
 import 'package:store_app/screens/home.dart';
 import 'package:store_app/widgets/nav_bar_widget.dart';
@@ -34,13 +35,13 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget _buildNavBar() {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: EdgeInsets.all(20.r),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(25.0),
+        borderRadius: BorderRadius.circular(25.r),
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Container(
-            height: 70,
+            height: 50.h,
             color: const Color.fromARGB(255, 200, 200, 200).withValues(alpha: 0.2),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

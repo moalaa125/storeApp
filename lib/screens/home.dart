@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
 import 'package:store_app/services/get_all_products_services.dart';
@@ -28,7 +29,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-  
       backgroundColor: Color(0xFFFCF8FA),
       appBar: AppBar(
         elevation: 0,
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
             icon: FaIcon(
               FontAwesomeIcons.cartPlus,
               color: Colors.black,
-              size: 20,
+              size: 20.sp,
             ),
           ),
         ],
@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
           'Trendo',
           style: TextStyle(
             color: Colors.black,
-            fontSize: 25,
+            fontSize: 25.sp,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
       body: Stack(
         children: [
           Padding(
-            padding: const EdgeInsets.only(right: 10, left: 10, top: 80),
+            padding: EdgeInsets.only(right: 10.w, left: 10.w, top: 80.h),
             child: FutureBuilder<List<ProductModel>>(
               future: futureProducts,
               builder: (context, snapshot) {
@@ -78,8 +78,8 @@ class _HomeState extends State<Home> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       childAspectRatio: 1.4,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 100,
+                      crossAxisSpacing: 20.w,
+                      mainAxisSpacing: 100.h,
                     ),
                     itemBuilder: (context, index) {
                       return CustomCard(product: products[index]);

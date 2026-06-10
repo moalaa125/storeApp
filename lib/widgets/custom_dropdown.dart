@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomDropdown extends StatelessWidget {
   const CustomDropdown({
@@ -19,16 +20,16 @@ class CustomDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(16.r),
       child: DropdownButtonFormField<String>(
         decoration: InputDecoration(
           hintText: hintText,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10.r),
           ),
-          contentPadding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 13,
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 20.w,
+            vertical: 13.h,
           ),
         ),
         initialValue: initialValue,

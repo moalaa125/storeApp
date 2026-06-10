@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
 import 'package:store_app/screens/update_product_page.dart';
-// import 'package:store_app/screens/update_product_page.dart';
-// import 'package:store_app/services/add_product_service.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key, required this.product});
@@ -14,7 +13,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, UpdateProductPage.id , arguments: product);
+        Navigator.pushNamed(context, UpdateProductPage.id, arguments: product);
       },
       child: Stack(
         clipBehavior: Clip.none,
@@ -32,32 +31,35 @@ class CustomCard extends StatelessWidget {
             ),
             child: Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(5.r),
               ),
               color: Colors.white,
               elevation: 2,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
+                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 2.h),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(product.title.substring(0, 11), style: TextStyle(fontSize: 16)),
-                    SizedBox(height: 10),
-      
+                    Text(
+                      product.title.substring(0, 11),
+                      style: TextStyle(fontSize: 16.sp),
+                    ),
+                    SizedBox(height: 10.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           r'$ '
                           '${product.price.toString()},',
+                          style: TextStyle(fontSize: 13.sp),
                         ),
                         IconButton(
                           onPressed: null,
                           icon: FaIcon(
                             FontAwesomeIcons.solidHeart,
                             color: Colors.red,
-                            size: 20,
+                            size: 20.sp,
                           ),
                         ),
                       ],
@@ -68,9 +70,9 @@ class CustomCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: -60,
-            left: 80,
-            child: Image.network(product.image, height: 100, width: 100),
+            top: -60.h,
+            left: 80.w,
+            child: Image.network(product.image, height: 80.h, width: 80.w),
           ),
         ],
       ),
