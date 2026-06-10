@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/services/add_product_service.dart';
-import 'package:store_app/widgets/custom_buttom_nav.dart';
 import 'package:store_app/widgets/custom_dropdown.dart';
 import 'package:store_app/widgets/custom_text_filed.dart';
 import 'package:store_app/widgets/cutom_button.dart';

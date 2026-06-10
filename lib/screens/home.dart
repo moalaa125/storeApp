@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
 import 'package:store_app/services/get_all_products_services.dart';
-import 'package:store_app/widgets/custom_buttom_nav.dart';
 import 'package:store_app/widgets/custom_card.dart';
 
 class Home extends StatefulWidget {

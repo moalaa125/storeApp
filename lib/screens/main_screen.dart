@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:store_app/screens/add_product_page.dart';
 import 'package:store_app/screens/home.dart';
