@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
-import 'package:store_app/screens/add_product_page.dart';
 import 'package:store_app/screens/update_product_page.dart';
 // import 'package:store_app/screens/update_product_page.dart';
 // import 'package:store_app/services/add_product_service.dart';

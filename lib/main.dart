@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:store_app/screens/add_product_page.dart';
 import 'package:store_app/screens/home.dart';
 import 'package:store_app/screens/update_product_page.dart';
-import 'package:store_app/screens/select_screen_nav_bar.dart';
 
 void main() {
   runApp(const StoreApp());
@@ -23,11 +22,11 @@ class StoreApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           routes: {
-            SelectScreenNavBar.id: (context) => SelectScreenNavBar(),
+            Home.id: (context) => Home(),
             UpdateProductPage.id: (context) => UpdateProductPage(),
             AddProductPage.id: (context) => AddProductPage(),
           },
-          initialRoute: SelectScreenNavBar.id,
+          initialRoute: Home.id,
         );
       },
     );
